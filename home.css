@@ -2,6 +2,7 @@
     font-family: "Pixel";
     src: url('font.ttf') format('truetype');
 }
+
 body {
     background-image: url('bg.gif');
     background-repeat: no-repeat;
@@ -9,39 +10,46 @@ body {
     color: white;
     font-family: 'Pixel';
 }
+
 .games-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start; /* keep everything in a neat row */
     gap: 20px;
     padding: 20px;
 }
+
 .game {
     width: 150px;
+    flex-shrink: 0; /* stops the divs from shrinking if space gets tight */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers the content horizontally */
 }
+
 .game img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
+
 .game-title {
     margin-top: 10px;
     font-size: 1.2em;
 }
+
 a:link {
     color: blue;
 }
+
 a:visited {
     color: blue;
 }
+
 a:hover {
-    color: red; 
+    color: red;
 }
+
 a:active {
     color: green;
-}
-.games-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-top: 50px;
 }
